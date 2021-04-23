@@ -7,6 +7,7 @@ import { GuardAuthService } from './guard-auth.service';
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'contactus', component: ContactusComponent, canActivate: [GuardAuthService] },
+  { path: '', redirectTo: '/login', pathMatch: 'full' }
 ];
 
 @NgModule({
